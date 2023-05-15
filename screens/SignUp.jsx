@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, Image, TextInpu
 import { COLORS, SIZES, FONTS, icons, images } from '../constant';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
 
   const myHeader = new Headers();
   myHeader.append("apikey", "pf5FcRDspg1NJtcM211Oh0SDZzwRVVE9");
@@ -200,7 +200,7 @@ export default function SignUp() {
         alignItems: 'center',
         justifyContent: 'center'
       }}
-        onPress={() => console.log("Navigate to Home")}
+        onPress={() => navigation.navigate("Tabs")}
       >
         <Text style={{ color: COLORS.white, ...FONTS.h3 }}>Continue</Text>
       </TouchableOpacity>
